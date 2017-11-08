@@ -1,0 +1,47 @@
+% This is the AfriNIC Whois server.
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '105.32.0.0 - 105.39.255.255'
+
+% No abuse contact registered for 105.32.0.0 - 105.39.255.255
+
+inetnum:        105.32.0.0 - 105.39.255.255
+netname:        Mobinil
+descr:          The Egyptian Company for Mobile Services (Mobinil)
+country:        EG
+admin-c:        KA21-afrinic
+tech-c:         KA21-afrinic
+status:         ASSIGNED PA
+mnt-by:         MOBINIL
+source:         AFRINIC # Filtered
+parent:         105.32.0.0 - 105.47.255.255
+
+person:         Karim Ayoub
+address:        Nile City Building
+address:        2005C, Cornishe El-Nil, Ramlet Boulaq
+address:        Cairo
+address:        Egypt
+address:        Cairo
+address:        Egypt
+phone:          +201223202020
+phone:          +201223202020
+nic-hdl:        KA21-afrinic
+mnt-by:         GENERATED-PXQPNOUTEYTLUIYBK8GMEISNIQLOHPQ2-MNT
+source:         AFRINIC # Filtered
+
+% Information related to '105.32.0.0/12AS37069'
+
+route:          105.32.0.0/12
+descr:          Orange Egypt IP address
+origin:         AS37069
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * This object is migrated from RIPE to AFRINIC
+remarks:        * http://whois.afrinic.net
+remarks:        ****************************
+mnt-by:         MOBINIL
+source:         AFRINIC # Filtered

@@ -1,0 +1,106 @@
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/whois_tou.html
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/public/whoisinaccuracy/index.xhtml
+#
+
+
+#
+# The following results may also be obtained via:
+# https://whois.arin.net/rest/nets;q=174.139.55.107?showDetails=true&showARIN=false&showNonArinTopLevelNet=false&ext=netref2
+#
+
+NetRange:       174.139.0.0 - 174.139.255.255
+CIDR:           174.139.0.0/16
+NetName:        VPLSNET
+NetHandle:      NET-174-139-0-0-1
+Parent:         NET174 (NET-174-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       AS35908
+Organization:   Krypt Technologies (VPLSI)
+RegDate:        2008-11-11
+Updated:        2012-03-02
+Comment:        
+Comment:        For legal requests/assistance please use the
+Comment:        following contact information:
+Comment:        VPLS Subpoena Phone: 213-406-9088
+Comment:        VPLS Abuse Fax: 213-406-9001
+Comment:        VPLS AUP, Terms of Service and DMCA/Copyright notices info:
+Comment:        http://www.vpls.net/privacy/
+Ref:            https://whois.arin.net/rest/net/NET-174-139-0-0-1
+
+
+OrgName:        Krypt Technologies
+OrgId:          VPLSI
+Address:        1744 W. Katella Avenue.
+Address:        Suite 200
+City:           Orange
+StateProv:      CA
+PostalCode:     92867
+Country:        US
+RegDate:        2005-03-25
+Updated:        2017-09-07
+Comment:        For legal requests/assistance please use the
+Comment:        following contact information:
+Comment:        VPLS Subpoena Phone: 213-406-9018
+Comment:        VPLS Abuse Fax: 213-406-9001
+Comment:        VPLS AUP, Terms of Service and DMCA/Copyright notices info: http://www.vpls.net/privacy/
+Comment:        descr: This space is statically assigned.
+Ref:            https://whois.arin.net/rest/org/VPLSI
+
+ReferralServer:  rwhois://vault.krypt.com:4321
+
+OrgTechHandle: TME68-ARIN
+OrgTechName:   Mektrakarn, Ted 
+OrgTechPhone:  +1-213-406-9000 
+OrgTechEmail:  Ted@vpls.net
+OrgTechRef:    https://whois.arin.net/rest/poc/TME68-ARIN
+
+OrgAbuseHandle: KRYPT-ARIN
+OrgAbuseName:   Krypt Keeper
+OrgAbusePhone:  +1-213-406-9018 
+OrgAbuseEmail:  abuse@krypt.com
+OrgAbuseRef:    https://whois.arin.net/rest/poc/KRYPT-ARIN
+
+OrgNOCHandle: NETWO813-ARIN
+OrgNOCName:   Network Engineering
+OrgNOCPhone:  +1-866-599-9593 
+OrgNOCEmail:  admin-arin@vpls.net
+OrgNOCRef:    https://whois.arin.net/rest/poc/NETWO813-ARIN
+
+OrgTechHandle: KRYPT-ARIN
+OrgTechName:   Krypt Keeper
+OrgTechPhone:  +1-213-406-9018 
+OrgTechEmail:  abuse@krypt.com
+OrgTechRef:    https://whois.arin.net/rest/poc/KRYPT-ARIN
+
+RTechHandle: KRYPT-ARIN
+RTechName:   Krypt Keeper
+RTechPhone:  +1-213-406-9018 
+RTechEmail:  abuse@krypt.com
+RTechRef:    https://whois.arin.net/rest/poc/KRYPT-ARIN
+
+RNOCHandle: NETWO813-ARIN
+RNOCName:   Network Engineering
+RNOCPhone:  +1-866-599-9593 
+RNOCEmail:  admin-arin@vpls.net
+RNOCRef:    https://whois.arin.net/rest/poc/NETWO813-ARIN
+
+RAbuseHandle: KRYPT-ARIN
+RAbuseName:   Krypt Keeper
+RAbusePhone:  +1-213-406-9018 
+RAbuseEmail:  abuse@krypt.com
+RAbuseRef:    https://whois.arin.net/rest/poc/KRYPT-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/whois_tou.html
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/public/whoisinaccuracy/index.xhtml
+#
+

@@ -1,0 +1,40 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '123.125.114.0 - 123.125.114.255'
+
+% Abuse contact for '123.125.114.0 - 123.125.114.255' is 'hqs-ipabuse@chinaunicom.cn'
+
+inetnum:        123.125.114.0 - 123.125.114.255
+netname:        HY
+descr:          SGGHN
+country:        CN
+admin-c:        WH1089-AP
+tech-c:         WH1089-AP
+mnt-by:         MAINT-CNCGROUP-BJ
+status:         ASSIGNED NON-PORTABLE
+last-modified:  2010-08-09T05:51:54Z
+source:         APNIC
+
+person:         wang hongtao
+address:        WU
+country:        CN
+nic-hdl:        WH1089-AP
+phone:          +86-010-82602212
+fax-no:         +86-010-62113196
+e-mail:         zhangkeyou@baidu.com.cn
+mnt-by:         MAINT-CNCGROUP-BJ
+last-modified:  2010-08-09T05:50:50Z
+source:         APNIC
+
+% Information related to '123.112.0.0/12AS4808'
+
+route:          123.112.0.0/12
+descr:          China Unicom Beijing Province Network
+country:        CN
+origin:         AS4808
+mnt-by:         MAINT-CNCGROUP-RR
+last-modified:  2016-05-20T01:24:03Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.15-43 (WHOIS-NODE3)

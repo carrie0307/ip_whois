@@ -1,0 +1,61 @@
+86.106.110.134
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '86.106.109.0 - 86.106.111.255'
+
+% Abuse contact for '86.106.109.0 - 86.106.111.255' is 'ip-abuse@propersupportmedia.com'
+
+inetnum:        86.106.109.0 - 86.106.111.255
+netname:        UK-PROPER-20050418
+country:        GB
+org:            ORG-PSL18-RIPE
+admin-c:        PSN34-RIPE
+tech-c:         PSN34-RIPE
+status:         ALLOCATED PA
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         PROPER-MNT
+mnt-lower:      PROPER-MNT
+mnt-domains:    PROPER-MNT
+mnt-routes:     PROPER-MNT
+created:        2015-02-19T08:26:12Z
+last-modified:  2016-05-23T12:39:56Z
+source:         RIPE # Filtered
+
+organisation:   ORG-PSL18-RIPE
+org-name:       Proper Support LLP
+org-type:       LIR
+address:        Suite 1. The Studio. St. Nicholas Close, Elstree
+address:        WD6 3EW
+address:        London
+address:        UNITED KINGDOM
+phone:          +442038703243
+abuse-c:        PSN34-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        PROPER-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         PROPER-MNT
+created:        2014-12-05T08:48:56Z
+last-modified:  2017-06-30T09:26:50Z
+source:         RIPE # Filtered
+
+role:           Proper Support NOC
+address:        London, GB
+abuse-mailbox:  ip-abuse@propersupportmedia.com
+nic-hdl:        PSN34-RIPE
+mnt-by:         PROPER-MNT
+created:        2014-12-08T15:31:15Z
+last-modified:  2015-02-02T14:27:11Z
+source:         RIPE # Filtered
+
+% Information related to '86.106.110.0/23AS51490'
+
+route:          86.106.110.0/23
+descr:          Proper Support LLP
+origin:         AS51490
+mnt-by:         PROPER-MNT
+created:        2015-02-19T11:31:21Z
+last-modified:  2015-02-19T11:31:21Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.90 (BLAARKOP)
