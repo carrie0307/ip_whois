@@ -1,0 +1,705 @@
+route:      74.217.150.0/24
+descr:      PNAP-LAX
+origin:     AS35908
+mnt-by:     INAP-MAINT-RADB
+changed:    asanders@internap.com 20120904
+source:     RADB
+
+route:      66.186.46.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.47.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.32.0/19
+descr:      VPLS Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070303
+source:     RADB
+
+route:      74.222.132.0/24
+descr:      VPLS Route Object
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070606
+source:     RADB
+
+route:      74.222.152.0/21
+descr:      VPLS Route Object
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070606
+source:     RADB
+
+route:      74.222.141.0/24
+descr:      VPLS Route Object
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070606
+source:     RADB
+
+route:      66.186.32.0/20
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      207.71.120.0/21
+descr:      VPLS, Inc. Aggregate 3
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.240.0/20
+descr:      VPLS, Inc. Aggregate 1
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      67.43.144.0/20
+descr:      VPLS, Inc. Aggregate 4
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.240.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.241.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      74.222.128.0/18
+descr:      VPLS, Inc. Aggregate 3
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070625
+source:     RADB
+ddd
+route:      67.198.128.0/19
+descr:      VPLS, Inc. Aggregate 4
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070625
+source:     RADB
+
+route:      202.84.96.0/19
+descr:      VPLS Customer Route Object
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070702
+source:     RADB
+
+route:      122.144.64.0/18
+descr:      VPLS Customer Route Object
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070702
+source:     RADB
+
+route:      67.198.128.0/17
+descr:      VPLS, Inc. Aggregate 5
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20070914
+source:     RADB
+
+route:      67.229.0.0/17
+descr:      VPLS, Inc. Aggregate 6
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20071113
+source:     RADB
+
+route:      209.11.242.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.243.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.244.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.245.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.246.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.247.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.248.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.249.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.250.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.251.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.252.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.254.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.255.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      209.11.253.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      208.84.144.0/24
+descr:      VPLS Customer Proxy Route Register
+origin:     AS35908
+remarks:    This is an auto-generated route for a VPLS customer,
+remarks:    created because no matching route-object was found.
+remarks:    Please contact support at vpls.net with any questions.
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20071120
+source:     RADB
+
+route:      67.229.128.0/18
+descr:      VPLS, Inc. Aggregate 7
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20080125
+source:     RADB
+
+route:      67.229.0.0/16
+descr:      VPLS, Inc. Aggregate 8
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20080610
+source:     RADB
+
+route:      98.126.0.0/16
+descr:      VPLS, Inc. Aggregate 9
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20080610
+source:     RADB
+
+route:      94.177.72.0/21
+descr:      VPLS customer route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      94.177.48.0/21
+descr:      VPLS customer route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      94.177.48.0/20
+descr:      VPLS customer route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      93.115.80.0/20
+descr:      VPLS customer route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      93.115.128.0/20
+descr:      VPLS customer route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      94.177.24.0/21
+descr:      VPLS customer route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      110.34.128.0/17
+descr:      VPLS, Inc. Aggregate 12
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090226
+source:     RADB
+
+route:      93.115.144.0/20
+descr:      VPLS Customer Route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090309
+source:     RADB
+
+route:      94.177.80.0/20
+descr:      VPLS Customer Route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090309
+source:     RADB
+
+route:      174.139.0.0/16
+descr:      VPLS, Inc. Aggregate 11
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20081111
+source:     RADB
+
+route:      96.62.0.0/16
+descr:      VPLS, Inc. Aggregate 13
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20090605
+source:     RADB
+
+route:      173.214.0.0/20
+descr:      VPLS, Inc. Aggregate 14
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20091120
+source:     RADB
+
+route:      173.214.0.0/18
+descr:      VPLS, Inc. Aggregate 15
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20091208
+source:     RADB
+
+route:      174.139.75.0/24
+descr:      VPLS, Inc. LAX7
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20100120
+source:     RADB
+
+route:      98.126.68.0/24
+descr:      VPLS, Inc. LAX7
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20100120
+source:     RADB
+
+route:      67.43.157.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      146.82.147.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.32.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.34.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.35.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.36.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.37.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.38.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.39.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.40.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.41.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.42.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.43.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.44.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      98.126.69.0/24
+descr:      VPLS, Inc. LAX7
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20100120
+source:     RADB
+
+route:      98.126.124.0/24
+descr:      LAX
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20100413  #02:11:36Z
+source:     RADB
+
+route:      207.71.121.0/24
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      66.186.45.0/24
+descr:      VPLS, Inc. Aggregate 2
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    tedm@krypt.com 20051111
+source:     RADB
+
+route:      162.215.255.0/24
+descr:      Hostgator.com LLC for bluehost.com
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bgpadmin@vpls.net 20160717  #03:51:36Z
+source:     RADB
+
+route:      184.75.176.0/20
+descr:      LAX7 Route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20110303  #05:30:26Z
+source:     RADB
+
+route:      184.164.192.0/19
+descr:      VPLS Asia
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20110527  #15:38:54Z
+source:     RADB
+
+route:      100.43.128.0/18
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20111116  #02:47:18Z
+source:     RADB
+
+route:      198.61.96.0/19
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20120824  #02:32:21Z
+source:     RADB
+
+route:      204.107.103.0/24
+descr:      NEPTUNE(ACS)
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20100513  #03:04:23Z
+source:     RADB
+
+route:      74.222.146.0/24
+descr:      IAD2 Route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bgpadmin@vpls.net 20151208  #06:43:33Z
+source:     RADB
+
+route:      67.198.230.0/24
+descr:      IAD2 Route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bgpadmin@vpls.net 20151208  #06:44:24Z
+source:     RADB
+
+route:      67.198.231.0/24
+descr:      IAD2 Route
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bgpadmin@vpls.net 20151208  #06:45:45Z
+source:     RADB
+
+route:      192.174.96.0/19
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20130426  #04:07:41Z
+source:     RADB
+
+route:      192.250.192.0/20
+descr:      FEDERAL ONLINE GROUP LLC
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20130603  #03:35:47Z
+source:     RADB
+
+route:      146.82.146.0/23
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20130726  #08:35:49Z
+source:     RADB
+
+route:      23.91.192.0/19
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20130911  #06:33:13Z
+source:     RADB
+
+route:      23.251.0.0/19
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20131107  #03:48:10Z
+source:     RADB
+
+route:      192.250.240.0/20
+descr:      Federal Online Group LLC
+            Client ID: 2543
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140508  #10:18:55Z
+source:     RADB
+
+route:      107.6.192.0/18
+descr:      VPLS
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140604  #17:41:42Z
+source:     RADB
+
+route:      173.214.0.0/17
+descr:      VPLS, Inc. Aggregate 15
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bgpadmin@vpls.net 20151214  #21:01:53Z
+source:     RADB
+
+route:      192.155.160.0/20
+descr:      FEDERAL ONLINE GROUP LLC
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140728  #17:01:43Z
+source:     RADB
+
+route:      104.200.192.0/19
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140922  #20:58:55Z
+source:     RADB
+
+route:      183.182.11.0/24
+descr:      Xiaochuan, Gu
+            ClientID: 1335
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20141107  #18:01:54Z
+source:     RADB
+
+route:      183.182.10.0/24
+descr:      Xiaochuan, Gu
+            ClientID: 1335
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20141107  #18:02:15Z
+source:     RADB
+
+route:      202.131.55.0/24
+descr:      Xiaochuan, Gu
+            ClientID: 1335
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20141107  #18:03:42Z
+source:     RADB
+
+route:      202.131.56.0/24
+descr:      Xiaochuan, Gu
+            ClientID: 1335
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20141107  #18:04:20Z
+source:     RADB
+
+route:      104.243.249.0/24
+descr:      GZ Systems Limited dba PureVPN.com
+            Client ID: 5787
+            Ticket #611735
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20141127  #07:40:08Z
+source:     RADB
+
+route:      209.11.240.0/20
+descr:      VPLS, Inc.
+origin:     AS35908
+mnt-by:     MAINT-AS27276
+changed:    ted@loudpacket.com 20050504
+source:        NTTCOM
+
+route6:     2607:f180::/32
+descr:      IPV6
+origin:     AS35908
+notify:     peering@vpls.net
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20130314  #16:05:18Z
+source:     RADB
+
+route6:     2607:f181::/32
+descr:      IPv6
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140315  #11:57:33Z
+source:     RADB
+
+route6:     2607:f180::/31
+descr:      IPv6
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140315  #11:58:01Z
+source:     RADB
+
+route6:     2400:C280::/48
+descr:      xiamen zhiyitui techology co,ltd
+            Client ID: 5006
+            Ticket #540387 - Per QQ pls set up 20 PG620 and broadcast the IPs for the client
+origin:     AS35908
+mnt-by:     MAINT-AS35908
+changed:    bjohnson@vpls.net 20140403  #09:53:40Z
+source:     RADB

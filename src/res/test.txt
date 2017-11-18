@@ -1,0 +1,23 @@
+inet6num:         mandatory   single     primary/lookup key
+netname:          mandatory   single     lookup key
+descr:            mandatory   multiple  
+country:          mandatory   multiple  
+geoloc:           optional    single    
+language:         optional    multiple  
+org:              optional*   single     inverse key
+sponsoring-org:   optional    single    
+admin-c:          mandatory   multiple   inverse key
+tech-c:           mandatory   multiple   inverse key
+status:           mandatory   single    
+assignment-size:  optional*   single    
+remarks:          optional    multiple  
+notify:           optional    multiple   inverse key
+mnt-by:           mandatory   multiple   inverse key
+mnt-lower:        optional    multiple   inverse key
+mnt-routes:       optional    multiple   inverse key
+mnt-domains:      optional    multiple   inverse key
+mnt-irt:          optional    multiple   inverse key
+changed:          optional    multiple  
+created:          generated   single
+last-modified:    generated   single
+source:           mandatory   single 

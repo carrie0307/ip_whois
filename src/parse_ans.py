@@ -34,6 +34,9 @@ def get_asn_whois(query_ip):
 
 
 def parse_whois_asn_info(asn_whois):
+    '''
+    解析asn的信息
+    '''
     temp = asn_whois.split('|')
     # Parse out the ASN information.
     ret = {'asn_registry': temp[4].strip(' \n')}

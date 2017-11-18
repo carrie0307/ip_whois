@@ -1,0 +1,33 @@
+mntner
+mntner, referral-by, descr, admin-c, upd-to, auth, mnt-by, changed, source, tech-c, mnt-nfy, notify, remarks, abuse-mailbox, Information Technology, ATTN, tel
+
+key-cert
+key-cert, certif, notify, admin-c, tech-c, mnt-by, changed, source, method, owner, fingerpr
+
+as-set
+as-set, descr, tech-c, admin-c, mnt-by, changed, source, members, notify, mbrs-by-ref, remarks, upd-to, mnt-nfy, mnt-lower
+
+route
+route, descr, origin, mnt-by, changed, source, notify, remarks, member-of, Attn, Information Technology, ATTN, ., admin-c, tech-c, country, holes, mnt-lower, mnt-routes, export-comps, inject, components, aggr-mtd, 
+
+inet6num
+inet6num, netname, descr, country, admin-c, tech-c, notify, changed, source, mnt-by, status, remarks, mnt-lower 
+
+inet-rtr
+inet-rtr, local-as, ifaddr, admin-c, tech-c, mnt-by, changed, source, peer, notify, alias, remarks, descr, interface, mp-peer
+
+route-set
+route-set, descr, tech-c, admin-c, notify, mnt-by, changed, source, members, mbrs-by-ref, remarks, mp-members, mnt-lower
+
+route6
+route6, descr, origin, notify, mnt-by, source, changed, remarks, member-of, admin-c, tech-c, country, mnt-lower
+
+aut-num
+aut-num, as-name, descr, import, export, admin-c, tech-c, notify, mnt-by, changed, source, remarks, default, member-of, mp-import, mp-export, Attn, Tel, Information Technology, ATTN, mnt-nfy, upd-to, mnt-lower, mnt-routes
+
+inetnum
+inetnum, netname, descr, country, admin-c, tech-c, changed, source, notify, mnt-by, remarks, mnt-lower, status
+
+
+问题：OrgTechHandle，OrgNOCHandle，OrgTechHandle，OrgAbuseHandle，RTechHandle等没有
+

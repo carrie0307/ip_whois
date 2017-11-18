@@ -1,0 +1,56 @@
+as-block
+as-block, type, descr, remarks, org, admin-c, tech-c, mnt-by, mnt-lower, changed, source
+
+mntner
+mntner, descr, admin-c, tech-c, upd-to, mnt-nfy, auth, notify, mnt-by, changed, source, remarks, abuse-mailbox, org
+
+domain
+domain, descr, nserver, org, admin-c, tech-c, zone-c, mnt-by, mnt-lower, remarks, changed, source, notify, ds-rdata, dom-net
+
+filter-set
+filter-set, descr, tech-c, admin-c, mnt-by, changed, source
+
+key-cert
+key-cert, method, owner, fingerpr, certif, notify, mnt-by, changed, remarks, source, admin-c, tech-c, org 
+
+as-set
+as-set, descr, tech-c, admin-c, mnt-by, members, changed, source, notify, org, remarks, mbrs-by-ref, mnt-lower
+
+route
+route, descr, origin, mnt-by, changed, source, remarks, mnt-routes, org, notify, mnt-lower, member-of
+
+irt
+irt, address, e-mail, abuse-mailbox, admin-c, tech-c, auth, mnt-by, changed, source, signature, encryption
+
+route6
+route6, descr, origin, mnt-by, changed, source, notify, org, mnt-routes, remarks
+
+inet6num
+inet6num, netname, descr, country, org, admin-c, tech-c, mnt-by, mnt-lower, status, remarks, changed, source, notify, mnt-routes, mnt-domains, mnt-irt 
+
+person
+person, address, phone, e-mail, nic-hdl, mnt-by, changed, source, fax-no, notify, remarks, org
+
+role
+role, address, phone, fax-no, admin-c, tech-c, nic-hdl, e-mail, mnt-by, changed, source, remarks, notify, org, abuse-mailbox 
+
+inetnum
+inetnum, netname, descr, country, org, admin-c, tech-c, status, notify, mnt-by, mnt-lower, mnt-routes, changed, source, remarks, mnt-domains, mnt-irt,fax, descr
+
+peering-set
+peering-set, descr, tech-c, peering, admin-c, mnt-by, changed, source
+
+route-set
+route-set, descr, members, mbrs-by-ref, tech-c, admin-c, notify, mnt-by, changed, source, mnt-lower, mp-members, remarks
+
+rtr-set
+rtr-set, descr, tech-c, admin-c, mnt-by, changed, source,
+
+organisation
+organisation, org-name, org-type, country, address, e-mail, admin-c, tech-c, remarks, mnt-ref, mnt-by, changed, source, phone, fax-no, notify, descr, abuse-mailbox
+
+aut-num
+aut-num, as-name, descr, status, remarks, org, admin-c, tech-c, mnt-by, changed, source, notify, mnt-lower, mnt-routes, mnt-irt, import, export, mp-import, mp-export, mp-default
+
+inet-rtr
+inet-rtr, descr, local-as, ifaddr, admin-c, tech-c, mnt-by, changed, source

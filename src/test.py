@@ -1,15 +1,11 @@
 #coding=utf-8
 
-
-def my_add(a,b):
-    return a + b
-
-
-def my_multi(a,b):
-    return a * b
-
-def my_sub(a,b):
-    return a - b
-
-
-dc = {'add':my_add(a,b), 'multi': my_multi(a,b), 'my_sub':my_sub(a,b)}
+ini_ips = ['198.162.112.', '103.84.167.', '196.6.176.', '45.4.56.', '5.22.152.']
+ips = []
+for i in range(1,223):
+    for ini_ip in ini_ips:
+        ip = ini_ip + str(i)
+        ips.append(ip)
+string = '\n'.join(ips)
+with open('ip_list.txt', 'w') as f:
+    f.write(string)

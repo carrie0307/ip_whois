@@ -10,102 +10,13 @@ import re
 # reload(sys)
 # sys.setdefaultencoding('gbk')
 
+
 RIR_WHOIS = {
-    'arin': {
-        'server': 'whois.arin.net',
-        'fields': {
-            'name': r'(NetName):[^\S\n]+(?P<val>.+?)\n',
-            'handle': r'(NetHandle):[^\S\n]+(?P<val>.+?)\n',
-            'description': r'(OrgName|CustName):[^\S\n]+(?P<val>.+?)'
-                    '(?=(\n\S):?)',
-            'country': r'(Country):[^\S\n]+(?P<val>.+?)\n',
-            'state': r'(StateProv):[^\S\n]+(?P<val>.+?)\n',
-            'city': r'(City):[^\S\n]+(?P<val>.+?)\n',
-            'address': r'(Address):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'postal_code': r'(PostalCode):[^\S\n]+(?P<val>.+?)\n',
-            'emails': (
-                r'.+?:.*?[^\S\n]+(?P<val>[\w\-\.]+?@[\w\-\.]+\.[\w\-]+)('
-                '[^\S\n]+.*?)*?\n'
-            ),
-            'created': r'(RegDate):[^\S\n]+(?P<val>.+?)\n',
-            'updated': r'(Updated):[^\S\n]+(?P<val>.+?)\n',
-        },
-        'dt_format': '%Y-%m-%d'
-    },
-    'lacnic': {
-        'server': 'whois.lacnic.net',
-        'fields': {
-            'handle': r'(nic-hdl):[^\S\n]+(?P<val>.+?)\n',
-            'description': r'(owner):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'country': r'(country):[^\S\n]+(?P<val>.+?)\n',
-            'emails': (
-                r'.+?:.*?[^\S\n]+(?P<val>[\w\-\.]+?@[\w\-\.]+\.[\w\-]+)('
-                '[^\S\n]+.*?)*?\n'
-            ),
-            'created': r'(created):[^\S\n]+(?P<val>[0-9]{8}).*?\n',
-            'updated': r'(changed):[^\S\n]+(?P<val>[0-9]{8}).*?\n'
-        },
-        'dt_format': '%Y%m%d'
-    },
-    'ripencc': {
-        'server': 'whois.ripe.net',
-        'fields': {
-            # 'name': r'(netname):[^\S\n]+(?P<val>.+?)\n',
-            'name': r'netname:[^\S\n]+(.+?)\n',
-            'admin-c':r'admin-c:[^\S\n]+(.+?)\n',
-            'tech-c':r'tech-c:[^\S\n]+(.+?)\n',
-            'status':r'status:[^\S\n]+(.+?)\n',
-            'mnt-by':r'mnt-by:[^\S\n]+(.+?)\n',
-            'nic-hdl':r'nic-hdl:[^\S\n]+(.+?)\n',
-            # 'handle':r'(nic-hdl):[^\S\n]+(.+?)\n',
-            'description':r'descr:[^\S\n]+(.+?)(?=(\n\S):?)',
-            'country':r'(country):[^\S\n]+(?P<val>.+?)\n',
-            'address':r'(address):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'emails':(
-                r'.+?:.*?[^\S\n]+(?P<val>[\w\-\.]+?@[\w\-\.]+\.[\w\-]+)('
-                '[^\S\n]+.*?)*?\n'
-            ),
-            'created':(
-                r'(created):[^\S\n]+(?P<val>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]'
-                '{2}:[0-9]{2}:[0-9]{2}Z).*?\n'
-            ),
-            'updated':(
-                r'(last-modified):[^\S\n]+(?P<val>[0-9]{4}-[0-9]{2}-[0-9]{2}T'
-                '[0-9]{2}:[0-9]{2}:[0-9]{2}Z).*?\n'
-            )
-        },
-        'dt_format': '%Y-%m-%dT%H:%M:%SZ'
-    },
-    'apnic': {
-        'server': 'whois.apnic.net',
-        'fields': {
-            'name': r'(netname):[^\S\n]+(?P<val>.+?)\n',
-            'handle': r'(nic-hdl):[^\S\n]+(?P<val>.+?)\n',
-            'description': r'(descr):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'country': r'(country):[^\S\n]+(?P<val>.+?)\n',
-            'address': r'(address):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'emails': (
-                r'.+?:.*?[^\S\n]+(?P<val>[\w\-\.]+?@[\w\-\.]+\.[\w\-]+)('
-                '[^\S\n]+.*?)*?\n'
-            ),
-            'updated': r'(changed):[^\S\n]+.*(?P<val>[0-9]{8}).*?\n'
-        },
-        'dt_format': '%Y%m%d'
-    },
-    'afrinic': {
-        'server': 'whois.afrinic.net',
-        'fields': {
-            'name': r'(netname):[^\S\n]+(?P<val>.+?)\n',
-            'handle': r'(nic-hdl):[^\S\n]+(?P<val>.+?)\n',
-            'description': r'(descr):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'country': r'(country):[^\S\n]+(?P<val>.+?)\n',
-            'address': r'(address):[^\S\n]+(?P<val>.+?)(?=(\n\S):?)',
-            'emails': (
-                r'.+?:.*?[^\S\n]+(?P<val>[\w\-\.]+?@[\w\-\.]+\.[\w\-]+)('
-                '[^\S\n]+.*?)*?\n'
-            ),
-        }
-    }
+    'arin': {'server': 'whois.arin.net'},
+    'lacnic':{'server': 'whois.lacnic.net'},
+    'ripe': {'server': 'whois.ripe.net'},
+    'apnic': {'server': 'whois.apnic.net'},
+    'afrinic': {'server': 'whois.afrinic.net'}
 }
 
 
@@ -222,6 +133,6 @@ def get_finall_whois(query_ip):
 if __name__ == '__main__':
     # 154.72.28.1
     whois = get_finall_whois('173.234.162.98')
-    print whois
+     #print whois
     # with open('ipwhois.txt', 'w') as f:
         # f.write(whois)

@@ -1,0 +1,43 @@
+dmin Contract, refer, Abuse, Security, Copyright Infringements, 
+
+inet6num
+inet6num, netname, descr, country, admin-c, tech-c, status, remarks, mnt-by, mnt-lower, last-modified, source, org, mnt-routes, mnt-irt, geoloc, language
+
+mntner
+mntner, descr, admin-c, tech-c, upd-to, mnt-by, referral-by, last-modified, source, remarks, mnt-nfy, country, abuse-mailbox 
+
+route6
+route6, descr, origin, mnt-by, last-modified, source, country, remarks, mnt-lower, mnt-routes, member-of, holes, components
+
+irt
+irt, address, e-mail, abuse-mailbox, admin-c, tech-c, mnt-by, last-modified, source, phone, fax-no, remarks, irt-nfy, signature, encryption
+
+peering-set
+peering-set, descr, peering, remarks, tech-c, admin-c, mnt-by, last-modified, source, mp-peering, mnt-lower
+
+role
+role, address, country, phone, fax-no, e-mail, admin-c, tech-c, nic-hdl, remarks, mnt-by, last-modified, source, abuse-mailbox
+
+aut-num
+aut-num, as-name, descr, country, admin-c, tech-c, mnt-by, remarks, last-modified, source, org, mnt-irt, mnt-routes, import, export, default, mnt-lower, member-of, mp-import, mp-default, mp-export, import-via, export-via 
+
+route-set
+route-set, descr, members, mbrs-by-ref, admin-c, tech-c, mnt-by, last-modified, source, remarks, mp-members, mnt-lower 
+
+as-set
+as-set, descr, members, tech-c, admin-c, mnt-by, last-modified, source, country, remarks, mbrs-by-ref, mnt-lower, Telephone, FAX
+
+inetnum
+inetnum, netname, country, descr, admin-c, tech-c, status, mnt-by, mnt-routes, last-modified, source, remarks, org, mnt-lower, mnt-irt, geoloc, Tech-contact, language, Contact, Tech Contact, Email, , Tel, Fax, Web site, Address, abuse-email, Abusing network please contact, Name, Number, email address, Network Issues, || Tel, || CEO, || Email, abuse-mailbox, Abuse contact, abusing network please contact, |, |            _.-', |            '.   '._,, Network-plan, eMail, For Network issue please contact Network Operation Centre, 
+
+key-cert
+key-cert, method, owner, fingerpr, certif, mnt-by, last-modified, source, remarks, admin-c, tech-c
+
+route
+route, descr, country, origin, mnt-by, remarks, last-modified, source, mnt-lower, mnt-routes, member-of, components, Contact Person, Email Address, Contact Number, Phone, export-comps, holes, Level, Sector, House, address, phone, e-mail, Thapathali, Kathmandu Nepal, P.O.Box, Holding No, Plot, House No, house 77, West Kaliyartak, P.S, 
+
+inet-rtr
+inet-rtr, descr, local-as, ifaddr, peer, admin-c, tech-c, mnt-by, last-modified, source, remarks, alias 
+
+limerick
+limerick, text, author, admin-c, remarks, mnt-by, source

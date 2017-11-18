@@ -1,0 +1,64 @@
+as-block
+as-block, descr, remarks, mnt-by, created, last-modified, source, org, mnt-lower,notify
+
+mntner
+mntner, admin-c, upd-to, auth, mnt-by, created, last-modified, source, remarks,desrc,org,tech-c,auth,notify,abuse-mailbox
+
+domain
+domain, descr, admin-c, tech-c, zone-c, nserver, mnt-by, created, last-modified, source, remarks, notify, org, ds-rdata, changed, 
+
+filter-set
+filter-set, descr, remarks, filter, admin-c, tech-c, mnt-by, created, last-modified, source, notify, org, mp-filter, mnt-lower,changed
+
+person
+person, address, phone, nic-hdl, mnt-by, remarks, created, last-modified, source, fax-no,e-mail,org,notify,abuse-mailbox
+
+
+key-cert
+key-cert, method, owner, fingerpr, certif, mnt-by, created, last-modified, source, remarks, notify, org, admin-c, tech-c, source
+
+
+as-set
+as-set, descr, members, tech-c, admin-c, notify, mnt-by, created, last-modified, source, remarks, org, mbrs-by-ref, mnt-lower, changed, | Common communities, | Members, routes with origin, include the attribute member-of, | ABUSE/SPAM/UCE contact, | SUPPORT for clients, | PEERING contact, | NOC contact, | OTHER, And don't forget, for RIPE registered routes with origin, origin, | The basic control community follows this model, | Where x is the region, for which the permitted values are, | Examples, | following order of priority is applied, (formerly, however this attribute MUST not be added to aut-num, | PLEASE, 
+
+route
+route, descr, origin, mnt-by, created, last-modified, source, remarks, notify, member-of, mnt-lower, mnt-routes, org, pingable, ping-hdl, holes, inject, aggr-mtd, components, aggr-bndry, export-comps, abuse, other, changed, * Send abuse to, ****** Send abuse to, ******* Send abuse to, originating from this network, Abuse complaints, |   Abuse reports, | Support contact, |       Help desk, 
+
+irt
+irt, address, phone, fax-no, e-mail, signature, encryption, admin-c, tech-c, auth, remarks, irt-nfy, notify, mnt-by, created, last-modified, source, abuse-mailbox, changed, org, 
+
+poem
+poem, descr, text, form, admin-c, author, remarks, mnt-by, created, last-modified, source, notify, en riep, 
+
+route6
+route6, descr, origin, org, mnt-by, created, last-modified, source, remarks, mnt-lower, notify, pingable, member-of, mnt-routes, ping-hdl, holes, Network/Domain problems contact, inject, aggr-mtd, changed, components, 
+
+inet6num
+inet6num, netname, descr, country, admin-c, tech-c, notify, mnt-by, mnt-irt, status, created, last-modified, source, remarks, mnt-lower, org, mnt-routes, mnt-domains, sponsoring-org, geoloc, mail, phone, changed, language, abuse-c, assignment-size, +               33 144-686-456 ? Mail, 
+
+peering-set
+peering-set, descr, peering, remarks, tech-c, admin-c, notify, mnt-by, created, last-modified, source, mp-peering, last changes, mnt-lower, org, 
+
+role
+role, address, phone, fax-no, e-mail, admin-c, tech-c, nic-hdl, abuse-mailbox, notify, mnt-by, created, last-modified, source, remarks, org, general info, changed, mail, ** Abuse and spam notifications, ** Operational issues, ** General information, Peering-Support by, 
+
+inet-rtr
+inet-rtr, local-as, ifaddr, peer, admin-c, tech-c, mnt-by, created, last-modified, source, remarks, notify, descr, alias, interface, mp-peer, org, member-of, 
+
+route-set
+route-set, descr, mbrs-by-ref, tech-c, admin-c, mnt-by, created, last-modified, source, remarks, members, notify, changed, mp-members, org, mnt-lower, #members, # 80.187.160.0/20 # hole, #mp-members, #remarks, #org, #notify, #mnt-lower, | Members, route[6], 
+
+poetic-form
+poetic-form, descr, admin-c, mnt-by, created, last-modified, source, remarks, 
+
+rtr-set
+rtr-set, descr, members, remarks, tech-c, admin-c, mnt-by, created, last-modified, source, mbrs-by-ref, notify, org, mp-members, 
+
+organisation
+organisation, org-name, org-type, address, e-mail, mnt-ref, mnt-by, created, last-modified, source, remarks, abuse-c, 
+
+aut-num
+aut-num, as-name, descr, org, remarks, export, import, mp-export, mp-import, export-via, import-via, admin-c, tech-c, status, mnt-by, notify, created, last-modified, source, default, sponsoring-org, mnt-routes, member-of, mnt-lower, mp-default, changed, #   defined using just members, #  from this aut-num, BGP and network, Peering requests, Spam and abuse, DNS requests/changes, from AS9002 2a02, to   AS9002 2a02, |   Peering requests, |   24/7 Network Operations, |   Transit requests, |   Abuse complaints, |   are available at the following locations in Europe, |    London SOV, |    London THN, |    London THE, |    Paris CBV, |    Zurich IWB, |    Amsterdam NKF, |    Amsterdam RDB, |    Frankfurt IX1, abuse-c, | We are curently connected to following IXs, | Applied to all route, |   with x, , | Peering at, | Contact, ****************import, subject line, 
+
+inetnum
+inetnum, netname, descr, country, admin-c, tech-c, status, notify, mnt-by, created, last-modified, source, remarks, org, mnt-lower, mnt-routes, mnt-irt, mnt-domains, sponsoring-org, geoloc, language, abuse-c, changed, Report security issues to, P.O. Box, Abuse notifications to, delete, org.nr, News issues, FTP issues, Web issues, Proxy issues, Primary Abuse contact, Address, name and routing issues, Mail issues, Network/Domain problems contact, Sales contact, abuse to, Kommission, distributor of, Kunden, Telefon, Fax, Email, *  please send a message to, *  gelieve een bericht te zenden naar, please inform, organisation-location, website-if-available, For fastest response, please submit abuse reports to, Support, *     including spam, please send email to Microcom at, * mailto, please mail only to, phone, fax-no, +               33 671 936 647 Fax,
