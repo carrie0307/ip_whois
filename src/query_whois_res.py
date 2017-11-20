@@ -65,6 +65,7 @@ def find_inetnum_object(query_ip):
                 if le_match_num <= std_num <= ge_match_num:
                     # 通过差找出最接近当前std_num的范围
                     if ge_match_num - le_match_num <= min_distance:
+                        min_distance = ge_match_num - le_match_num
                         current_inetnum = item['inetnum']
 
                     # print current_inetnum
@@ -116,17 +117,65 @@ def find_org_object(org_hdl):
 
 def find_route_object(query_ip):
     '''
-    根据ip来找
 
+    ip: 105.37.214.20
+    route: 105.32.0.0/12
+    inetnum:  105.32.0.0 - 105.39.255.255
+
+    方法1： 根据ip来找
+
+    类似对inetnum的寻找方法
     但是123.125.114.144 的route是123.112.0.0/12， inetnum是123.125.114.0 - 123.125.114.255
+
+    方法2: 先获取ASn，通过ASN匹配origin获得route
+
     '''
-    pass
+    global db
+    collection = db['route-db']
+    ip_pattern = query_ip.split('.')
+    for i in range(3,-1,-1):
+
+        std_num = int(ip_pattern[i]) # '×××'中要匹配的数字
+        ip_pattern[i] = r'[0-9]{1,3}'
+        ip_regex = '.'.join(ip_pattern)
+        # print ip_regex
+
+        res = collection.find({'route':{'$regex':ip_regex}},{'_id':False, 'route':True})
+        if res.count() != 0:
+
+            max_route = 0
+            current_route = ''
+
+            for item in res:
+                match_num = int(item['route'].split('.')[i])
+                if match_num == std_num:
+                    current_route = item['route']
+                    break
+                elif max_route < match_num < std_num:
+                    max_route = match_num
+                    current_route = item['route']
+
+            if current_route:
+                break
+
+    if current_route:# 有可能for i in range(3,-1,-1)没有找到current_route而自然退出了循环
+        print current_route
+    else:
+        print '---'
+
+    # QUESTION: 41.242.192.64获取的原whois信息中无route，根据上述方法可以获得route，但所ASN号码不对应
+
+
+
+
 
 
 
 if __name__ == '__main__':
-    inetnum_object = find_inetnum_object('41.242.192.64')
-    person_hdl,org = parse_object.parse_inetnum_object(inetnum_object)
-    print person_hdl,org
-    print find_person_object(person_hdl)
-    find_org_object(org)
+    find_route_object('41.242.192.64')
+    '''以下是由inetnum发起的搜索'''
+    # inetnum_object = find_inetnum_object('41.242.192.64')
+    # person_hdl,org = parse_object.parse_inetnum_object(inetnum_object)
+    # print person_hdl,org
+    # print find_person_object(person_hdl)
+    # find_org_object(org)

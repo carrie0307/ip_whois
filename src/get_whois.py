@@ -44,12 +44,7 @@ def get_asn_whois(query_ip):
         if not d:
 
             break
-    # print data
     return data
-    # data = data.split('|')
-    # asn_registry = data[4].strip() # 获取管理组织名称
-    # return asn_registry
-
 
 
 def get_ip_rir(as_info):
@@ -61,9 +56,18 @@ def get_ip_rir(as_info):
     return rir
 
 
+def get_ip_ASN(as_info):
+    '''
+    从向whois.cymru.com获得的asn信息中提取ASN(有的查询不到asn，返回的是as name)
+    '''
+    as_info = as_info.split('|')
+    asn = as_info[0].strip() # 获取管理组织名称
+    return asn
+
+
 def get_whois(query_ip,asn_registry):
     '''
-    功能： 根据asn_registry，获取query_ip的whois信息
+    功能： 根据rir，获取query_ip的whois信息
 
     return： 返回查询所得的whois信息
 
@@ -100,12 +104,16 @@ def get_finall_whois(query_ip):
     whois_info = get_whois(query_ip, rir)
     return rir,whois_info
 
+
+def get_final_asn(query_ip):
+    '''
+    获取query_ip的ASN
+    '''
+    as_info = get_asn_whois(query_ip)
+    asn = get_ip_ASN(as_info)
+    return asn
+
 if __name__ == '__main__':
-    # get_asn_whois('80.95.8.219')
-    # 154.72.28.1
-    rir,whois_info = get_finall_whois('80.95.8.219')
-    print rir
-    print whois_info
-     #print whois
-    # with open('ipwhois.txt', 'w') as f:
-        # f.write(whois)
+    # rir,whois_info = get_finall_whois('80.95.8.219')
+    asn = get_final_asn('64.233.189.113')
+    print asn
