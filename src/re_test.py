@@ -4,6 +4,10 @@ import re
 '''
 ^开头  和 $结尾 的重要性！！！
 
+#ASBLOCK也 匹配wenti
+
+asset怎么找
+
 '''
 
 def hund_test():

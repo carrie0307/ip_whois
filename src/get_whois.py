@@ -44,52 +44,21 @@ def get_asn_whois(query_ip):
         if not d:
 
             break
-    print data
-    data = data.split('|')
-    asn_registry = data[4].strip() # 获取管理组织名称
-    return asn_registry
+    # print data
+    return data
+    # data = data.split('|')
+    # asn_registry = data[4].strip() # 获取管理组织名称
+    # return asn_registry
 
 
 
-def get_asn_origin_whois(asn):
-    ASN_ORIGIN_WHOIS = {
-        'radb': {
-            'server': 'whois.radb.net',
-            'fields': {
-                'description': r'(descr):[^\S\n]+(?P<val>.+?)\n',
-                'maintainer': r'(mnt-by):[^\S\n]+(?P<val>.+?)\n',
-                'updated': r'(changed):[^\S\n]+(?P<val>.+?)\n',
-                'source': r'(source):[^\S\n]+(?P<val>.+?)\n',
-            }
-        },
-    }
-    # radb是什么？
-    server = ASN_ORIGIN_WHOIS['radb']['server']
-    conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    conn.settimeout(5)
-    # log.debug('ASN origin WHOIS query for {0} at {1}:{2}'.format(4808, server, 43))
-    conn.connect((server, 43))
-    query = ' -i origin {0}{1}'.format(asn, '\r\n')
-
-                # Query the whois server, and store the results.
-    conn.send(query.encode())
-
-    response = ''
-    while True:
-
-        d = conn.recv(4096).decode()
-
-        response += d
-
-        if not d:
-
-            break
-
-    # print response
-    # w_file = open('asn_response.txt','w')
-    # w_file.write(response)
-    # w_file.close()
-    conn.close()
+def get_ip_rir(as_info):
+    '''
+    从向whois.cymru.com获得的asn信息中提取rir名称
+    '''
+    as_info = as_info.split('|')
+    rir = as_info[4].strip() # 获取管理组织名称
+    return rir
 
 
 def get_whois(query_ip,asn_registry):
@@ -126,13 +95,17 @@ def get_finall_whois(query_ip):
     '''
     获取原始的whois信息
     '''
-    asn_registry = get_asn_whois(query_ip)
-    whois_info = get_whois(query_ip, asn_registry)
-    return asn_registry,whois_info
+    as_info = get_asn_whois(query_ip)
+    rir = get_ip_rir(as_info)
+    whois_info = get_whois(query_ip, rir)
+    return rir,whois_info
 
 if __name__ == '__main__':
+    # get_asn_whois('80.95.8.219')
     # 154.72.28.1
-    whois = get_finall_whois('173.234.162.98')
+    rir,whois_info = get_finall_whois('80.95.8.219')
+    print rir
+    print whois_info
      #print whois
     # with open('ipwhois.txt', 'w') as f:
         # f.write(whois)

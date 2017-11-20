@@ -8,12 +8,13 @@ collection = mongodb_operation.mongo_connection()
 
 def main():
     global collection
-    with open('ip_list.txt', 'r') as f:
-        lines = f.readlines()
-    ips = []
-    for line in lines:
-        ip = line.strip()
-        ips.append(ip)
+    # with open('ip_list.txt', 'r') as f:
+    #     lines = f.readlines()
+    # ips = []
+    # for line in lines:
+    #     ip = line.strip()
+    #     ips.append(ip)
+    ips = ['123.125.114.144']
     for query_ip in ips:
         # query_ip = raw_input('Input the ip:')
         try:
@@ -21,7 +22,11 @@ def main():
         except:
             print query_ip + 'whois 有误\n'
             continue
-        std_whois_info = parse_whois.std_deal_whois(query_ip, asn_registry, ip_whois)
+        try:
+            std_whois_info = parse_whois.std_deal_whois(query_ip, asn_registry, ip_whois)
+        except:
+            print query_ip + 'parse 有误\n'
+            continue
         try:
             collection.insert(std_whois_info)
         except:
