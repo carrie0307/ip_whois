@@ -8,6 +8,10 @@ import re
 
 asset怎么找
 
+route105.37.214.20
+
+大于和小于某个数的正则表达式
+
 '''
 
 def hund_test():
@@ -47,6 +51,9 @@ def hund_test():
 
 
 def tens_le():
+    '''
+    小于某十位数
+    '''
     s = '37'
     le_test = '32'
     if int(s) > 9:
@@ -91,6 +98,9 @@ def tens_le():
 
 
 def tens_ge():
+    '''
+    大于某十位数
+    '''
     s = '37'
     ge_test = '120'
     if int(s) > 9:

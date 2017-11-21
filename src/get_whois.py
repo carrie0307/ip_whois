@@ -6,9 +6,10 @@
 '''
 import socket
 import re
+import parse_asinfo
 # import sys
 # reload(sys)
-# sys.setdefaultencoding('gbk')
+# sys.setdefaultencoding('utf8')
 
 
 RIR_WHOIS = {
@@ -47,24 +48,6 @@ def get_asn_whois(query_ip):
     return data
 
 
-def get_ip_rir(as_info):
-    '''
-    从向whois.cymru.com获得的asn信息中提取rir名称
-    '''
-    as_info = as_info.split('|')
-    rir = as_info[4].strip() # 获取管理组织名称
-    return rir
-
-
-def get_ip_ASN(as_info):
-    '''
-    从向whois.cymru.com获得的asn信息中提取ASN(有的查询不到asn，返回的是as name)
-    '''
-    as_info = as_info.split('|')
-    asn = as_info[0].strip() # 获取管理组织名称
-    return asn
-
-
 def get_whois(query_ip,asn_registry):
     '''
     功能： 根据rir，获取query_ip的whois信息
@@ -100,7 +83,7 @@ def get_finall_whois(query_ip):
     获取原始的whois信息
     '''
     as_info = get_asn_whois(query_ip)
-    rir = get_ip_rir(as_info)
+    rir = parse_asinfo.get_ip_rir(as_info)
     whois_info = get_whois(query_ip, rir)
     return rir,whois_info
 
@@ -110,10 +93,20 @@ def get_final_asn(query_ip):
     获取query_ip的ASN
     '''
     as_info = get_asn_whois(query_ip)
-    asn = get_ip_ASN(as_info)
+    asn = parse_asinfo.get_ip_ASN(as_info)
     return asn
+
+
+def get_all_asinfo(query_ip):
+    '''
+    返回解析后完整的as信息字典
+    '''
+    as_info = get_asn_whois(query_ip)
+    as_dict = parse_asinfo.parse_as_info(as_info)
+    return as_dict
+
 
 if __name__ == '__main__':
     # rir,whois_info = get_finall_whois('80.95.8.219')
-    asn = get_final_asn('64.233.189.113')
-    print asn
+    # asn = get_final_asn('203.217.157.138')
+    get_all_asinfo('203.217.157.138')
