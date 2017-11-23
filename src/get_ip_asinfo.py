@@ -14,7 +14,7 @@ import time
 def main():
     client = MongoClient('172.29.152.152', 27017)
     db = client.ip_whois
-    collection = db['ip_asinfo']
+    collection = db['ip_asinfo2']
     res = collection.find({'asn':0},{'_id':False, 'ip':True})
     res = list(res)
     counter = 0
@@ -30,6 +30,7 @@ def main():
                                          'asn':as_info['asn'],
                                          'asn_description':as_info['asn_description']
                                          }})
+            print ip + ' saved ...'
             # 防止被ban
             counter += 1
             if counter == 1000:

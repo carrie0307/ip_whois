@@ -164,6 +164,7 @@ def find_route_object(query_ip):
         print '---'
 
     # QUESTION: 41.242.192.64获取的原whois信息中无route，根据上述方法可以获得route，但所ASN号码不对应
+    # QUESTION: 156.0.240.101的asn是37353, route中有rogin：AS37353的对象，但该ip却没有route信息
 
 
 
@@ -172,9 +173,10 @@ def find_route_object(query_ip):
 
 
 if __name__ == '__main__':
-    find_route_object('41.242.192.64')
+    find_route_object('156.0.240.101')
     '''以下是由inetnum发起的搜索'''
-    # inetnum_object = find_inetnum_object('41.242.192.64')
+    # inetnum_object = find_inetnum_object('156.0.240.101')
+    # print inetnum_object
     # person_hdl,org = parse_object.parse_inetnum_object(inetnum_object)
     # print person_hdl,org
     # print find_person_object(person_hdl)

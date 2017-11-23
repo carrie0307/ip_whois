@@ -29,9 +29,35 @@ from pymongo import *
 #     except:
 #         continue
 
+
+# client = MongoClient('172.29.152.152', 27017)
+# db = client.ip_whois
+# collection = db['ip_asinfo']
+# res = collection.find({'asn':'15169'},{'_id':False,'ip':True})
+# res = list(res)
+# ips = []
+# for ip in res:
+#     ips.append(ip['ip'])
+#
+# with open('googleip.txt', 'r') as f:
+#     lines = f.readlines()
+#
+# new_ips = []
+# for line in lines:
+#     ip = line.strip()
+#     if ip not in ips:
+#         print ip
+#         new_ips.append(ip)
+#
+# new_ips = '\n'.join(new_ips)
+# with open('googleip.txt', 'w') as f:
+#     f.write(new_ips)
+
+
 client = MongoClient('172.29.152.152', 27017)
 db = client.ip_whois
-collection = db['ip_asn']
-res = collection.aggregate([{'$group':{'_id':'$asn','count':{'$sum':1}}}]).sort("count")
-res = list(res)
-print res[2]
+collection = db['ip_asinfo2']
+res = collection.find({'asn':'15169'},{'_id':False,'ip':True,'asn_description':True})
+for item in res:
+    if item['asn_description'] != 'GOOGLE - Google LLC, US':
+        print item['ip']

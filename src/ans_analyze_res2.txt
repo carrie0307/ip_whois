@@ -1,0 +1,181 @@
+asn: 15169
+count:591
+cidr:  91
+rir: arin   
+country_code:  US   
+asn_description:  GOOGLE - Google LLC, US   
+
+asn: 24424
+count:120
+cidr:  4
+rir: apnic   
+country_code:  CN   
+asn_description:  CNNIC-GOOGLECN-AP Beijing Gu Xiang Information Technology Co.,Ltd., CN   
+
+asn: 32934
+count:22
+cidr:  17
+rir: arin   ripencc   
+country_code:  US   IE   
+asn_description:  FACEBOOK - Facebook, Inc., US   
+
+asn: 36351
+count:10
+cidr:  9
+rir: arin   
+country_code:  US   
+asn_description:  SOFTLAYER - SoftLayer Technologies Inc., US   
+
+asn: NA
+count:4
+cidr:  1
+rir: other   arin   
+country_code:     US   
+asn_description:  NA   
+
+asn: 36029
+count:3
+cidr:  2
+rir: arin   
+country_code:  US   
+asn_description:  SGINC - Search Guide Inc, US   
+
+asn: 22611
+count:3
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  IMH-WEST - InMotion Hosting, Inc., US   
+
+asn: 13414
+count:2
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  TWITTER - Twitter Inc., US   
+
+asn: 17139
+count:2
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  NETRANGE - Corporate Colocation Inc., US   
+
+asn: 31815
+count:2
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  MEDIATEMPLE - Media Temple, Inc., US   
+
+asn: 11351
+count:2
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  RR-NYSREGION-ASN-01 - Time Warner Cable Internet LLC, US   
+
+asn: 12874
+count:1
+cidr:  1
+rir: ripencc   
+country_code:  IT   
+asn_description:  FASTWEB, IT   
+
+asn: 3320
+count:1
+cidr:  1
+rir: ripencc   
+country_code:  DE   
+asn_description:  DTAG Internet service provider operations, DE   
+
+asn: 25885
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  OPAQ - OPAQ Networks, Inc., US   
+
+asn: 4766
+count:1
+cidr:  1
+rir: apnic   
+country_code:  KR   
+asn_description:  KIXS-AS-KR Korea Telecom, KR   
+
+asn: 4768
+count:1
+cidr:  1
+rir: apnic   
+country_code:  NZ   
+asn_description:  CLIX-NZ TelstraClear Ltd, NZ   
+
+asn: 19649
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  DATAPIPE-GOV-SOLUTIONS - DataPipe, Inc., US   
+
+asn: 18978
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  ENZUINC-US - Enzu Inc, US   
+
+asn: 4549
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  ESPN-AS - ESPN, US   
+
+asn: 3356
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  LEVEL3 - Level 3 Communications, Inc., US   
+
+asn: 7782
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  ALSK-7782 - Alaska Communications Systems Group, Inc., US   
+
+asn: 27195
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  CAVERN-TECHNOLOGIES - EPIC Alliance, Inc., US   
+
+asn: 4837
+count:1
+cidr:  1
+rir: apnic   
+country_code:  CN   
+asn_description:  CHINA169-BACKBONE CHINA UNICOM China169 Backbone, CN   
+
+asn: 12322
+count:1
+cidr:  1
+rir: ripencc   
+country_code:  FR   
+asn_description:  PROXAD, FR   
+
+asn: 19994
+count:1
+cidr:  1
+rir: arin   
+country_code:  US   
+asn_description:  RACKSPACE - Rackspace Hosting, US   
+
+asn: 2516
+count:1
+cidr:  1
+rir: apnic   
+country_code:  JP   
+asn_description:  KDDI KDDI CORPORATION, JP   

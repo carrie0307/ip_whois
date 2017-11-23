@@ -7,9 +7,9 @@
 import socket
 import re
 import parse_asinfo
-# import sys
-# reload(sys)
-# sys.setdefaultencoding('utf8')
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 
 RIR_WHOIS = {
@@ -109,4 +109,4 @@ def get_all_asinfo(query_ip):
 if __name__ == '__main__':
     # rir,whois_info = get_finall_whois('80.95.8.219')
     # asn = get_final_asn('203.217.157.138')
-    get_all_asinfo('203.217.157.138')
+    print get_all_asinfo('74.125.203.92')
