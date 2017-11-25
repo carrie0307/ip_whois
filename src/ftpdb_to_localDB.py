@@ -59,7 +59,6 @@ def afrinic_whois_file2db(file_data):
                     item_name = item.split(':') # 提取属性名
                     if item_name: # 属性名提取不为空，则进一步提取属性值
                         item_name = item_name[0].strip()
-                        print item
                         regex = item_name + r':[^\S]*(.*)' # 提取属性值的正则表达式
                         item_value = re.compile(regex,re.I).findall(item)
                         item_value = item_value[0].strip() if item_value else ''

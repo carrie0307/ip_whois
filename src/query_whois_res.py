@@ -173,7 +173,7 @@ def find_route_object(query_ip):
 
 
 if __name__ == '__main__':
-    find_route_object('156.0.240.101')
+    find_route_object('41.242.192.64')
     '''以下是由inetnum发起的搜索'''
     # inetnum_object = find_inetnum_object('156.0.240.101')
     # print inetnum_object

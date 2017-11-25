@@ -29,7 +29,7 @@ def get_asn_whois(query_ip):
     '''
     conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     conn.settimeout(5)
-    conn.connect(('whois.cymru.com', 43))
+    conn.connect(('38.229.36.122', 43))
     # Query the Cymru whois server, and store the results.
     conn.send((
         ' -r -a -c -p -f {0}{1}'.format(
