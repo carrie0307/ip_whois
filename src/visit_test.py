@@ -47,12 +47,12 @@ def main():
                 log.logger.info("BAN TIME INTERVAL: " + str(ban_gap))
                 flag = True
         except Exception,e:
-            # BANNED：Connection reset by peer 
-            if flag:# 说明之前是正常运行的，开始被ban
+            # BANNED：Connection reset by peer
+            if flag and 'Connection reset by peer' in str(e):# 说明之前是正常运行的，开始被ban
                 normal_end = time.time()
                 # 允许正常运行的时间间隔
                 normal_gap = normal_end - normal_start
-                log.logger.info("Normal Perios : " + str(normal_gap) + '\n获取到as信息: ' + str(counter) + '\nerror: ' + str(e))
+                log.logger.info("Normal Perios : " + str(normal_gap) + '\n获取到as信息: ' + str(counter) + '   error: ' + str(e))
                 flag = False
                 counter = 0
                 ban_start = time.time()

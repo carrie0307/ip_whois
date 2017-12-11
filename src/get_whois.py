@@ -15,7 +15,7 @@ sys.setdefaultencoding('utf8')
 RIR_WHOIS = {
     'arin': {'server': 'whois.arin.net'},
     'lacnic':{'server': 'whois.lacnic.net'},
-    'ripe': {'server': 'whois.ripe.net'},
+    'ripencc': {'server': 'whois.ripe.net'},
     'apnic': {'server': 'whois.apnic.net'},
     'afrinic': {'server': 'whois.afrinic.net'}
 }
@@ -107,6 +107,7 @@ def get_all_asinfo(query_ip):
 
 
 if __name__ == '__main__':
-    # rir,whois_info = get_finall_whois('80.95.8.219')
+    rir,whois_info = get_finall_whois('41.63.0.68')
+    print whois_info
     # asn = get_final_asn('203.217.157.138')
-    print get_all_asinfo('74.125.203.92')
+    # print get_all_asinfo('74.125.203.92')

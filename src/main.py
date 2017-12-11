@@ -8,13 +8,12 @@ collection = mongodb_operation.mongo_connection()
 
 def main():
     global collection
-    # with open('ip_list.txt', 'r') as f:
-    #     lines = f.readlines()
-    # ips = []
-    # for line in lines:
-    #     ip = line.strip()
-    #     ips.append(ip)
-    ips = ['123.125.114.144']
+    with open('ip_list.txt', 'r') as f:
+        lines = f.readlines()
+    ips = []
+    for line in lines:
+        ip = line.strip()
+        ips.append(ip)
     for query_ip in ips:
         # query_ip = raw_input('Input the ip:')
         try:

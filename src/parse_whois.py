@@ -127,6 +127,8 @@ if __name__ == '__main__':
     # afraicnic
     # with open('ipwhois.txt', 'r') as f:
     #     whois_info = f.read()
-    query_ip = '45.4.56.75'
+    query_ip = '172.16.220.171'
     asn_registry,whois_info = get_whois.get_finall_whois(query_ip)
-    print std_deal_whois(query_ip, asn_registry, whois_info)
+    print asn_registry
+    print whois_info
+    # std_deal_whois(query_ip, asn_registry, whois_info)
