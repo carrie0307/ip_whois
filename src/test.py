@@ -1,6 +1,7 @@
 #coding=utf-8
-import random
-from pymongo import *
+import re
+# import random
+# from pymongo import *
 
 
 # client = MongoClient('172.29.152.152', 27017)
@@ -26,8 +27,20 @@ from pymongo import *
 # with open('apnicip_list.txt', 'w') as f:
 #     f.write(content)
 
+'''
+with open('apnic_ipnets.txt', 'r') as f:
+    content = f.read()
 
+inetnums = re.compile(r'apnic\|.{2}\|ipv4\|([\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3})\|[\d]+?\|[\d]{8}\|.+?').findall(content)
+string = '\n'.join(inetnums)
 
+with open('apnic_ips.txt', 'w') as f:
+    f.write(string)
+'''
+
+# print re.compile('inetnum:        ([\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}) {1,3}- ').findall('inetnum:        202.56.207.144   -   202.56.207.151')[0]
+
+# 从inetnum段中获取inetnum的一行
 with open('apnic.db.inetnum', 'r') as f:
     content = f.read()
 
@@ -35,9 +48,12 @@ inetnums = []
 objects = content.split('\n\n')
 for inetnum in objects:
     inetnum_range = inetnum.split('\n')[0]
-    inetnums.append(inetnum_range)
+    print inetnum_range
+    ip = re.compile('inetnum:        ([\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}) +-').findall(inetnum_range)[0]
+    inetnums.append(ip)
 
+print len(inetnums)
 content = '\n'.join(inetnums)
 
-with open('apnic_inetnum.txt', 'w') as f:
+with open('apnic_inetnum_ip.txt', 'w') as f:
     content = f.write(content)

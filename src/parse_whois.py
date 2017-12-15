@@ -1,6 +1,8 @@
 #coding=utf-8
 import re
 import get_whois
+import datetime
+
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('gbk')
@@ -127,8 +129,11 @@ if __name__ == '__main__':
     # afraicnic
     # with open('ipwhois.txt', 'r') as f:
     #     whois_info = f.read()
-    query_ip = '172.16.220.171'
-    asn_registry,whois_info = get_whois.get_finall_whois(query_ip)
-    print asn_registry
+    # query_ip = '172.16.220.171'
+    # asn_registry,whois_info = get_whois.get_finall_whois(query_ip)
+    # print asn_registry
+    # print whois_info
+    whois_info = get_whois.get_whois('223.220.0.0', 'apnic')
+    whois_info = parse_whois_info('apnic', whois_info)
+    whois_info['insert_time'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print whois_info
-    # std_deal_whois(query_ip, asn_registry, whois_info)

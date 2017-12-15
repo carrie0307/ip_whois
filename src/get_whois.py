@@ -60,7 +60,7 @@ def get_whois(query_ip,asn_registry):
     server = RIR_WHOIS[asn_registry]['server']
     # Create the connection for the whois query.
     conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    conn.settimeout(5)
+    conn.settimeout(10)
     conn.connect((server, 43))
     # Prep the query.
     query = query_ip + '\r\n'
@@ -107,7 +107,7 @@ def get_all_asinfo(query_ip):
 
 
 if __name__ == '__main__':
-    rir,whois_info = get_finall_whois('41.63.0.68')
-    print whois_info
+    # rir,whois_info = get_finall_whois('41.63.0.68')
+    # print whois_info
     # asn = get_final_asn('203.217.157.138')
-    # print get_all_asinfo('74.125.203.92')
+    print get_all_asinfo('12.0.0.1')

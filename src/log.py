@@ -5,7 +5,7 @@ import logging
 logger = logging.getLogger('mylogger')
 logger.setLevel(logging.DEBUG)
 # 创建一个handler，用于写入日志文件
-fh = logging.FileHandler('mylog.log')
+fh = logging.FileHandler('apnic_whois_info.log')
 fh.setLevel(logging.DEBUG)
 # 再创建一个handler，用于输出到控制台
 ch = logging.StreamHandler()
