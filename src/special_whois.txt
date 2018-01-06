@@ -1,0 +1,25 @@
+inetnum:        192.72.11.0 - 192.72.11.255
+netname:        SEED-NET11
+descr:          imported inetnum object for III
+country:        TW
+admin-c:        IfII1-AP
+tech-c:         IfII1-AP
+status:         ASSIGNED PORTABLE
+remarks:        ----------
+remarks:        imported from ARIN object:
+remarks:
+remarks:        inetnum:     192.72.11.0 - 192.72.11.255
+remarks:        netname:     SEED-NET11
+remarks:        org-id:      III
+remarks:        status:      reassignment
+remarks:        tech-c:      CKF-ARIN
+remarks:        reg-date:    1992-12-09
+remarks:        changed:     hostmaster@arin.net 19921209
+remarks:        source:      ARIN
+remarks:
+remarks:        ----------
+notify:         helpdesk@apnic.net
+mnt-by:         APNIC-HM
+last-modified:  2015-08-26T01:37:27Z
+source:         APNIC
+mnt-irt:        IRT-TWNIC-AP

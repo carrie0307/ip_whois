@@ -9,7 +9,7 @@ collection = mongodb_operation.mongo_connection()
 
 def main():
     global collection
-    with open('apnic_ips.txt', 'r') as f:
+    with open('testip.txt', 'r') as f:
         lines = f.readlines()
     ips = []
     for line in lines:
@@ -20,19 +20,19 @@ def main():
         try:
             asn_registry,ip_whois = get_whois.get_finall_whois(query_ip)
         except:
-            print query_ip + 'whois 有误\n'
+            print query_ip + '获取whois 有误\n'
             logger.info(query_ip + '获取whois 有误\n')
             continue
         try:
             std_whois_info = parse_whois.parse_whois_info(asn_registry, ip_whois)
         except:
-            print query_ip + 'parse 有误\n'
+            print query_ip + '解析whois 有误\n'
             logger.info(query_ip + 'parse 有误\n')
             continue
         try:
             collection.insert(std_whois_info)
         except:
-            print query_ip + 'save 有误\n'
+            print query_ip + '存储whois 有误\n'
             logger.info(query_ip + 'save 有误\n')
             continue
         # print query_ip + "saved ..."

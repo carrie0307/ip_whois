@@ -9,7 +9,7 @@ def mongo_connection():
     '''建立链接'''
     client = MongoClient('172.29.152.152', 27017)
     db = client.ip_whois
-    collection = db['apnic_whois_info']
+    collection = db['temp']
     return collection
 
 

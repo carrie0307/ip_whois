@@ -1,52 +1,15 @@
 #coding=utf-8
+'''
+    功能：将原始的whois信息解析成字典形式
+
+'''
 import re
 import get_whois
 import datetime
-
+import mongodb_operation
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('gbk')
-
-RIR_WHOIS = {
-    'arin': {'server': 'whois.arin.net'},
-    'lacnic':{'server': 'whois.lacnic.net'},
-    'ripe': {'server': 'whois.ripe.net'},
-    'apnic': {'server': 'whois.apnic.net'},
-    'afrinic': {'server': 'whois.afrinic.net'}
-}
-
-def parse_afrinic_whois(asn_registry, whois_info):
-    sector_names = []
-    field_info = RIR_WHOIS[asn_registry]['fields']
-    ip_whois = {}
-    ini_whois_info_sector = whois_info.split('\n\n')
-    whois_info_sector = []
-    for whois_sector in ini_whois_info_sector:
-        if '%' not in whois_sector:
-            # 由于每一段的最后一行缺少'\n'提取会失败，因此手动添加一个
-            sector_name = whois_sector.split(':')[0]
-            sector_names.append(sector_name)
-            whois_sector += '\n---'
-            whois_info_sector.append(whois_sector)
-    print sector_names
-    for sector,whois_sector in zip(sector_name,whois_info_sector):
-        ip_whois[sector] = {}
-        for key in RIR_WHOIS[asn_registry]['fields']:
-            field_info = RIR_WHOIS[asn_registry]['fields'][key]
-            parse_info = re.compile(field_info).findall(whois_sector)
-            if key == 'descr':
-                print parse_info
-            if parse_info: # 如果提取到了相关信息
-                if len(parse_info) == 1:
-                    ip_whois[sector][key] = parse_info
-                else:
-                    ip_whois[sector][key] = parse_info
-            # else:
-                # ip_whois[sector][key] = ''
-    # print ip_whois['netinfo'].keys()
-    # print ip_whois['person_info'].keys()
-    # print ip_whois['route_info'].keys()
-    return ip_whois
 
 
 def strip_str(string):
@@ -80,26 +43,50 @@ def parse_whois_info(asn_registry,whois_info):
         temp = {} # 临时存储当前一段的内容
         '''以下是对一个object的处理 '''
         for line in lines:
+
             if line != '---' and line != '':
-                item_name = line.split(':')[0].strip()
-                # regex = item_name + r':[^\S]+(.*)'
-                # 把 + 改为 * 说明冒号可以直接和后面data相连没有空格
-                regex = item_name + r':[^\S]*(.*)'
-                item_value = re.compile(regex,re.I).findall(line)
-                '''
-                eg. arin-174.139.55.107 存在一个comment内容为空
-                Found a referral to vault.krypt.com:4321.提取有误
-                '''
-                item_value = item_value[0].strip() if item_value else ''
-                # if item_value:
-                if item_name not in temp.keys():
-                    temp[item_name] = item_value
-                else:
-                    if isinstance(temp[item_name],list):
-                        temp[item_name].append(item_value)
+
+                ''' r':  +'(两个空格)，为了避免错误提取/Original nic-hdl in AUNIC: DP5-AU/中AUNIC: DP5-AU的部分'''
+                temp_split = re.split(r':  +',line)
+
+                #                 Taipei Taiwan 这种情况下line[0] == ' '
+                if line[0] != ' ':
+                    item_name = temp_split[0].strip()
+                    # regex = item_name + r':[^\S]+(.*)'
+                    # 把 + 改为 * 说明冒号可以直接和后面data相连没有空格
+                    regex = item_name + r':[^\S]*(.*)'
+                    item_value = re.compile(regex,re.I).findall(line)
+                    '''
+                    eg. arin-174.139.55.107 存在一个comment内容为空
+                    Found a referral to vault.krypt.com:4321.提取有误
+                    '''
+                    item_value = item_value[0].strip() if item_value else ''
+
+                    if item_name not in temp.keys():
+                        temp[item_name] = item_value
                     else:
-                        temp[item_name] = [temp[item_name]]
-                        temp[item_name].append(item_value)
+                        if isinstance(temp[item_name],list):
+                            temp[item_name].append(item_value)
+                        else:
+                            temp[item_name] = [temp[item_name]]
+                            temp[item_name].append(item_value)
+                elif line[0] == ' ':
+                    item_value = line.strip()
+                    if not isinstance(temp[item_name],list):
+                        # 此时的item_name还与上一次的相同
+                        temp[item_name] = temp[item_name] + ' ' + item_value
+                    elif isinstance(temp[item_name],list):
+                        '''
+                        处理以下情况
+                        address: ---
+                        address: ###
+                                 +++
+                        '''
+                        length = len(temp[item_name])
+                        temp[item_name][length-1] += item_value
+                    # print temp[item_name]
+
+
         '''将处理好的一个对象的信息，加入到ipwhois信息的字段中'''
         if sector not in ip_whois.keys():
             ip_whois[sector] = temp
@@ -126,14 +113,17 @@ def std_deal_whois(query_ip, asn_registry, ip_whois):
 
 
 if __name__ == '__main__':
-    # afraicnic
-    # with open('ipwhois.txt', 'r') as f:
-    #     whois_info = f.read()
-    # query_ip = '172.16.220.171'
-    # asn_registry,whois_info = get_whois.get_finall_whois(query_ip)
-    # print asn_registry
-    # print whois_info
-    whois_info = get_whois.get_whois('223.220.0.0', 'apnic')
+    collection = mongodb_operation.mongo_connection()
+    whois_info = get_whois.get_whois('203.11.221.0', 'apnic')
+    print whois_info
+    # with open('special_whois2.txt','r') as f:
+        # whois_info = f.read()
     whois_info = parse_whois_info('apnic', whois_info)
     whois_info['insert_time'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print whois_info
+    collection.insert(whois_info)
+    # for key in whois_info['inetnum']:
+    #     print key + ':'
+    #     print whois_info['inetnum'][key]
+    #     print '\n'
+    #
+    # print whois_info

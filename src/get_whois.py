@@ -21,6 +21,26 @@ RIR_WHOIS = {
 }
 
 
+'''
+
+RIR_WHOIS = {
+    'arin': {'server': '199.71.0.46'},
+    'lacnic':{'server': '200.3.14.10'},
+    'ripe': {'server': '193.0.6.135'},
+    'apnic': {'server': '202.12.29.220'},
+    'afrinic': {'server': '196.216.2.20'},
+    'cymru':{'server':'38.229.36.122'}
+}
+
+
+# whois.arin.net 199.71.0.46
+# whois.arin.net 199.5.26.46
+# whois.arin.net 199.212.0.46
+# whois.afrinic.net 196.216.2.20
+# whois.afrinic.net 196.216.2.21
+
+'''
+
 def get_asn_whois(query_ip):
     '''
     功能： 向whois.cymru.com发出查询，获得ip的AS、ASNAME和管理组织名称asn_registry
@@ -28,7 +48,7 @@ def get_asn_whois(query_ip):
     return:返回对应的rip
     '''
     conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    conn.settimeout(5)
+    conn.settimeout(10)
     conn.connect(('38.229.36.122', 43))
     # Query the Cymru whois server, and store the results.
     conn.send((
@@ -110,4 +130,4 @@ if __name__ == '__main__':
     # rir,whois_info = get_finall_whois('41.63.0.68')
     # print whois_info
     # asn = get_final_asn('203.217.157.138')
-    print get_all_asinfo('12.0.0.1')
+    print get_all_asinfo('123.125.114.144')

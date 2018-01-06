@@ -1,0 +1,33 @@
+inetnum:        203.11.221.0 - 203.11.221.255
+netname:        KNOWLEDGE2-AU
+descr:          David Purdue
+                18 Madeline St
+                Glen Iris, Vic, 3146
+country:        AU
+admin-c:        DP73-AP
+tech-c:         DP73-AP
+remarks:        ** Conversion note - reference 'DP5-AU' changed to 'DP73-AP'
+remarks:        Record imported from AUNIC as part of AUNIC->APNIC migration
+remarks:        Please see http://www.apnic.net/db/aunic/
+mnt-by:         APNIC-HM
+status:         ALLOCATED PORTABLE
+last-modified:  2008-09-04T06:50:15Z
+source:         APNIC
+
+person:         David Purdue
+address:        18 Madeline Street
+                Glen Iris
+                VIC 3146
+country:        AU
+phone:          +61 3 9889 6986
+fax-no:         +61 3 9889 6925
+e-mail:         david.purdue@auug.org.au
+nic-hdl:        DP73-AP
+remarks:        This data originated from AUNIC, and was copied as part of
+                the AUNIC to APNIC migration.  http://www.apnic.net/db/aunic/
+                Original nic-hdl in AUNIC: DP5-AU
+notify:         david.purdue@auug.org.au
+notify:         davidp@purdue.id.au
+mnt-by:         MAINT-AU-DP73-AP
+last-modified:  2008-09-04T07:29:25Z
+source:         APNIC

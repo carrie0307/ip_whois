@@ -11,11 +11,13 @@ import threading
 import Queue
 import mongodb_operation
 import datetime
+import re
+from log import logger
 
 collection = mongodb_operation.mongo_connection()
 
 '''同步队列'''
-ip_queue = Queue.Queue()
+inetnum_queue = Queue.Queue()
 res_queue = Queue.Queue() # 具体要执行的sql语句以及线程号
 
 '''线程数量'''
@@ -28,15 +30,16 @@ rir = 'apnic'
 
 def get_ip():
     '''
-    获取要运行的ip加入队列ip_queue
+    获取要运行的ip加入队列inetnum_queue
     '''
-    global ip_queue
+    global inetnum_queue
     # with open('ip_list.txt', 'r') as f:
-    with open('apnic_inetnum_ip.txt', 'r') as f:
+    # TODO:这里日后应当改为读取inetnum.db的情况
+    with open('apnic_inetnum.txt', 'r') as f:
         lines = f.readlines()
     for line in lines:
-        ip = line.strip()
-        ip_queue.put(ip)
+        inetnum = re.compile('inetnum:        (.+)').findall(line)[0]
+        inetnum_queue.put(inetnum)
 
 
 def socket_get_info():
@@ -44,19 +47,25 @@ def socket_get_info():
     这里具体调用获取信息的函数，返回对应的sql语句
     '''
     global rir
-    global ip_queue
+    global inetnum_queue
     global res_queue
-    while not ip_queue.empty():
-        ip = ip_queue.get()
+
+    while not inetnum_queue.empty():
+
+        inetnum = inetnum_queue.get()
         try:
             # '''获取whois信息'''
+            ip = inetnum.split('-')[0]
+            ip = ip.strip()
             whois_info = get_whois.get_whois(ip, rir)
             std_whois = parse_whois.parse_whois_info('apnic', whois_info)
+            std_whois['id_inetnum'] = inetnum # 把这个作为查询的id
             std_whois['insert_time'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            res_queue.put([ip,std_whois])
+            res_queue.put([inetnum,std_whois])
         except Exception,e:
             # 异常的ip重新获取一次
-            ip_queue.put(ip)
+            inetnum_queue.put(inetnum)
+            logger.info(inetnum)
             continue
     print 'ip 全部运行完成... '
 
@@ -66,11 +75,12 @@ def whois_info_save():
     向mongo数据库存储结果
     '''
     global res_queue
+    global inetnum_queue
     global collection
 
     while True:
         try:
-            ip,std_whois = res_queue.get(timeout=600)
+            inetnum,std_whois = res_queue.get(timeout=600)
         except:
             print 'all res saved ...'
             break
@@ -78,7 +88,8 @@ def whois_info_save():
             collection.insert(std_whois)
         except:
             # 异常的ip重新获取一次
-            ip_queue.put(ip)
+            inetnum_queue.put(inetnum)
+            logger.info(inetnum)
     print 'save over ...'
 
 

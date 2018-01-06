@@ -38,6 +38,7 @@ with open('apnic_ips.txt', 'w') as f:
     f.write(string)
 '''
 
+'''
 # print re.compile('inetnum:        ([\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}) {1,3}- ').findall('inetnum:        202.56.207.144   -   202.56.207.151')[0]
 
 # 从inetnum段中获取inetnum的一行
@@ -57,3 +58,16 @@ content = '\n'.join(inetnums)
 
 with open('apnic_inetnum_ip.txt', 'w') as f:
     content = f.write(content)
+'''
+
+
+with open('apnic_whois_info.log', 'r') as f:
+    lines = f.readlines()
+ips = []
+for line in lines:
+    ip = re.compile('INFO - ([\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}\.[]\d]{1,3}) +-').findall(line)[0]
+    if ip not in ips:
+        ips.append(ip)
+ip_content = '\n'.join(ips)
+with open('testip.txt', 'w') as f:
+    f.write(ip_content)

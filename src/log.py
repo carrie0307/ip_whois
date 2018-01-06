@@ -2,7 +2,7 @@
 import logging
 
 
-logger = logging.getLogger('mylogger')
+logger = logging.getLogger('apnic_whois_info')
 logger.setLevel(logging.DEBUG)
 # 创建一个handler，用于写入日志文件
 fh = logging.FileHandler('apnic_whois_info.log')
